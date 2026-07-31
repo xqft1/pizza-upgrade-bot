@@ -56,7 +56,8 @@ contract.on(
 
       const sato = ethers.formatUnits(cost, 18);
 
-      const image = metadata.image;
+      const image = `https://metadata.satopizza.xyz/image/${tokenId}`;
+      console.log("Image URL:", image);
 
       const caption = `🔥🍕 PIZZA SLICE UPGRADED 🍕🔥
 
