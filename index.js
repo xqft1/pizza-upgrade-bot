@@ -56,9 +56,6 @@ contract.on(
 
       const sato = ethers.formatUnits(cost, 18);
 
-      const image = `https://metadata.satopizza.xyz/image/${tokenId}`;
-      console.log("Image URL:", image);
-
       const caption = `🔥🍕 PIZZA SLICE UPGRADED 🍕🔥
 
 🆔 Slice #${tokenId}
@@ -76,9 +73,7 @@ https://opensea.io/assets/ethereum/${NFT}/${tokenId}
 🔎 Transaction
 https://etherscan.io/tx/${event.log.transactionHash}`;
 
-      await bot.sendPhoto(CHAT_ID, image, {
-        caption
-      });
+      await bot.sendMessage(CHAT_ID, caption);
 
       console.log(`✅ Slice #${tokenId} upgraded`);
 
